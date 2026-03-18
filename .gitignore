@@ -1,26 +1,24 @@
 # Meteor
-  .versions
 
-  # Overstory
-  .overstory/
-  .seeds/
-  .mulch/
-  .canopy/
-  .claude/
+# Overstory
+.overstory/
+.seeds/
+.mulch/
+.canopy/
+.claude/
 
-  # Node
-  node_modules/
-  version
+# Node
+node_modules/
+version
 
-  # OS
-  .DS_Store
-  Thumbs.db
+# OS
+.DS_Store
+Thumbs.db
 
-  # IDE
-  .idea/
-  .vscode/
-  *.swp
-  *.swo
-  
-  .codacy/
-  AGENTS.md
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+.codacy/
