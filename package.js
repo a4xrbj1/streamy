@@ -1,6 +1,6 @@
 Package.describe({
   name: 'a4xrbj1:streamy',
-  version: '2.0.0',
+  version: '2.1.0',
   // Brief, one-line summary of the package.
   summary: 'Simple interface to use the underlying sockjs in a meteor application',
   // URL to the Git repository containing the source code for this package.
@@ -14,16 +14,13 @@ Package.onUse(function(api) {
   api.versionsFrom('3.0');
 
   api.use([
-    'check',
-    'reactive-var'
+    'check'
   ]);
 
   // Both
   api.addFiles([
     'lib/namespaces.js',
     'lib/core/core.js',
-    'lib/direct_messages/direct_messages.js',
-    'lib/broadcasts/broadcasts.js',
     'lib/utils/utils.js',
     'lib/multiple_servers/connection.js',
   ]);
@@ -31,16 +28,12 @@ Package.onUse(function(api) {
   // Client only
   api.addFiles([
     'lib/core/core_client.js',
-    'lib/direct_messages/direct_messages_client.js',
-    'lib/broadcasts/broadcasts_client.js',
     'lib/utils/utils_client.js'
   ], 'client');
 
   // Server only
   api.addFiles([
     'lib/core/core_server.js',
-    'lib/direct_messages/direct_messages_server.js',
-    'lib/broadcasts/broadcasts_server.js',
     'lib/utils/utils_server.js'
   ], 'server');
 

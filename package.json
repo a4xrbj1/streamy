@@ -1,6 +1,6 @@
 {
     "name": "@a4xrbj1/streamy",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "Simple interface to use the underlying sockjs in a Meteor application",
     "repository": {
       "type": "git",
@@ -11,4 +11,3 @@
       "registry": "https://npm.pkg.github.com"
     }
   }
-  
