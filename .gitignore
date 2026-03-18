@@ -3,9 +3,14 @@
 
   # Overstory
   .overstory/
+  .seeds/
+  .mulch/
+  .canopy/
+  .claude/
 
   # Node
   node_modules/
+  version
 
   # OS
   .DS_Store
@@ -17,3 +22,5 @@
   *.swp
   *.swo
   
+  .codacy/
+  AGENTS.md
