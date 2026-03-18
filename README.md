@@ -1,16 +1,20 @@
-# streamy: Directly use meteor streams with a friendly to use API.
+# streamy: Directly use Meteor streams with a friendly API
 
-The chat example is available live at [http://streamy.meteor.com](http://streamy.meteor.com/). It's not bug free yet but that's a pretty good example of what you can do with this package :)
+  > **Fork of [ferjep:streamy](https://github.com/ferjep/streamy)** — modernized for Meteor 3.0, with `underscore` removed and native JS throughout.
 
 ## Installation
 
-Simply add it to your project with:
-
 ```console
-meteor add yuukan:streamy
+meteor add a4xrbj1:streamy
 ```
 
-**Note:** Meteor keeps logging warning with `_debug` about the message not being recognized because of [those lines](https://github.com/meteor/meteor/blob/c0aab1e8d3a5f01b4bedaa1c63dea3fc8f3db9b7/packages/ddp/livedata_connection.js#L259). You can override `Meteor._debug` to get rid of it (as shown in the [example](https://github.com/YuukanOO/streamy/blob/master/examples/chat/client/app.js#L1-7)).
+Or via npm (GitHub Packages):
+
+```console
+npm install @a4xrbj1/streamy --registry=https://npm.pkg.github.com
+```
+
+**Note**: Meteor keeps logging warnings with `_debug` about messages not being recognized. You can override `Meteor._debug` to suppress these warnings (as shown in the example).
 
 ## Basic Usage
 
@@ -89,7 +93,7 @@ Streamy.BroadCasts.allow = function(data, from) {
 
 Every specific features after this line works the same way using the above core methods. When you call `broadcast` or `sessions`, this is the flow:
 
-- Wrap your message in a specific message (__direct__, __broadcast__, __room__, __join__, __leave__)
+- Wrap your message in a specific message (`__direct__`, `__broadcast__`, `__room__`, `__join__`, `__leave__`)
 - The above specific messages are handled by the server
 - It call the appropriate `allow` method to determine if it must continue
 - If `allow` returns true, send the message to concerned sessions
@@ -108,6 +112,7 @@ Streamy.on('my_message_type', function(data) {
 
 Streamy.broadcast('my_message_type', { my_data: 'testing broadcasting' });
 ```
+
 ## Multiple servers support
 
 Streamy comes with support for communication between multiple Meteor servers. When your app needs to connect to another Meteor server, if that server uses Streamy then communication by messages can be done easily just like between your server and client.
